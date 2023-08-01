@@ -1,0 +1,35 @@
+<div class="container mt-2">
+  <div class="row">
+    <h2>Add New Employee</h2>
+    <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+      <div class="form-row">
+        <div class="col-md-4 mb-3">
+          <label for="validationServer01" class="mb-2">First name</label>
+          <input type="text" formControlName="firstName"  class="form-control" placeholder="First name" />
+        </div>
+        <div class="col-md-4 mb-3">
+          <label for="validationServer02" class="mb-2">Last name</label>
+          <input type="text" class="form-control" formControlName="lastName" placeholder="Last name" />
+        </div>
+        <div class="col-md-4 mb-3">
+          <label for="validationServerUsername" class="mb-2">Email Id</label>
+          <div class="input-group">
+            <input type="text" class="form-control" formControlName="emailId" placeholder="email Id" />
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <label for="validationServer03" class="mb-2">Address</label>
+          <div class="input-group">
+            <textarea type="text" formControlName="address" class="form-control" placeholder="Address">
+            </textarea>
+          </div>
+        </div>
+      </div>
+      <div>
+        <button class="btn btn-success" type="submit">Submit</button>
+        &nbsp;
+        <button class="btn btn-primary" type="reset">clear</button>
+      </div>
+    </form>
+  </div>
+</div>
